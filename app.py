@@ -8,3 +8,6 @@ st.write("""
 # Predicción de precio de casas
 Este es un estimador de precios de casas creado con un modelo de Machine Learning.
 """)
+
+# Sidebar
+st.sidebar.header('Datos de entrada')
