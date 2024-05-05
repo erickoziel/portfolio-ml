@@ -7,35 +7,35 @@ import numpy as np
 import pickle
 import os
 
-# # Cargar el modelo entrenado
-# with open('models/regression_model.pkl', 'rb') as file:
-#     model = pickle.load(file) # Tuvo que haber creado con la misma versión de s
+# Cargar el modelo entrenado
+with open('models/regression_model.pkl', 'rb') as file:
+    model = pickle.load(file) # Tuvo que haber creado con la misma versión de s
 
-# Load model 
-@st.cache_resource
-def get_model():
-    # model = load_model('model/model.h5')
+# # Load model 
+# @st.cache_resource
+# def get_model():
+#     # model = load_model('model/model.h5')
     
-    model_name = 'models/regression_model.pkl'
+#     model_name = 'models/regression_model.pkl'
 
-    # If model is not in the cache or in the local directory, download it
-    if not os.path.isfile(model_name):
-        import urllib.request
-        model_url = "https://actas-prep-bucket.s3.us-west-2.amazonaws.com/regression_model.pkl" #os.environ.get('MODEL_URL')
-        model_path = model_name
-        urllib.request.urlretrieve(model_url, model_path)
+#     # If model is not in the cache or in the local directory, download it
+#     if not os.path.isfile(model_name):
+#         import urllib.request
+#         model_url = "https://actas-prep-bucket.s3.us-west-2.amazonaws.com/regression_model.pkl" #os.environ.get('MODEL_URL')
+#         model_path = model_name
+#         urllib.request.urlretrieve(model_url, model_path)
         
-        # Cargar el modelo entrenado
-        with open(model_path, 'rb') as file:
-            model = pickle.load(file) # Tuvo que haber creado con la misma versión de s
+#         # Cargar el modelo entrenado
+#         with open(model_path, 'rb') as file:
+#             model = pickle.load(file) # Tuvo que haber creado con la misma versión de s
 
-    else:
-        # Cargar el modelo entrenado
-        with open(model_path, 'rb') as file:
-            model = pickle.load(file) # Tuvo que haber creado con la misma versión de s
-    return model
+#     else:
+#         # Cargar el modelo entrenado
+#         with open(model_path, 'rb') as file:
+#             model = pickle.load(file) # Tuvo que haber creado con la misma versión de s
+#     return model
 
-model = get_model()
+# model = get_model()
 
 # Encabezado de la app
 st.write("""
