@@ -7,6 +7,8 @@ PAGE_CONFIG = {"page_title":"MyApp",
                "layout":"centered", 
                "initial_sidebar_state":"auto"}
 
+st.set_page_config(**PAGE_CONFIG)
+
 st.title("Machine Learning Applications")
 st.write("This web app showcases different machine learning applications.")
 
