@@ -2,6 +2,10 @@ import streamlit as st
 
 # app de streamlit que utiliza el moodelo de ML de clasificación de flores iris 
 
+PAGE_CONFIG = {"page_title":"MyApp", 
+               "page_icon":"🤖", 
+               "layout":"centered", 
+               "initial_sidebar_state":"auto"}
 
 st.title("Machine Learning Applications")
 st.write("This web app showcases different machine learning applications.")
